@@ -13,7 +13,7 @@ export async function GET(request: NextRequest) {
       id: user.id,
       name: user.name,
       email: user.email,
-      role: user.role
+      role: user.role as 'ADMIN' | 'DOCTOR' | 'RECEPTIONIST' | 'LAB_STAFF' as 'ADMIN' | 'DOCTOR' | 'RECEPTIONIST' | 'LAB_STAFF'
     })
   } catch (error) {
     return NextResponse.json({ error: 'Internal server error' }, { status: 500 })
