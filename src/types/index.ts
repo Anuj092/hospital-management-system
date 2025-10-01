@@ -3,8 +3,8 @@ export interface User {
   email: string
   name: string
   role: 'ADMIN' | 'DOCTOR' | 'RECEPTIONIST' | 'LAB_STAFF'
-  createdAt: Date
-  updatedAt: Date
+  createdAt?: Date
+  updatedAt?: Date
 }
 
 export interface Patient {
